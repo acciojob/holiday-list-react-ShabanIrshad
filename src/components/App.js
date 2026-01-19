@@ -32,10 +32,15 @@ const App = () => {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
-    
+    const indianCities=cityList.filter((element)=>element.country==='India');
+    console.log(indianCities);
   return (
     <div id="main">
-               {/* Do not remove the main div */}
+      <ol>
+        {indianCities.map((city,i)=>
+          <li key={i}>{city.name}</li>
+        )}
+      </ol>
     </div>
   )
 }
